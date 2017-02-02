@@ -1,5 +1,5 @@
 {**
- * plugins/generic/htmlArticleGalley/display.tpl
+ * plugins/generic/htmlArticleGalleyJNA/display.tpl
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky

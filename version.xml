@@ -2,7 +2,7 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * plugins/generic/htmlArticleGalley/version.xml
+  * plugins/generic/htmlArticleGalleyJNA/version.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
@@ -11,10 +11,10 @@
   * Plugin version information.
   -->
 <version>
-	<application>htmlArticleGalley</application>
+	<application>htmlArticleGalleyJNA</application>
 	<type>plugins.generic</type>
 	<release>1.0.0.0</release>
-	<date>2013-07-02</date>
+	<date>2017-02-01</date>
 	<lazy-load>1</lazy-load>
-	<class>HtmlArticleGalleyPlugin</class>
+	<class>HtmlArticleGalleyJNAPlugin</class>
 </version>

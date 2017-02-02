@@ -2,7 +2,7 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/generic/htmlArticleGalley/locale/fi_FI/locale.xml
+  * plugins/generic/htmlArticleGalleyJNA/locale/fi_FI/locale.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2003-2017 John Willinsky
@@ -12,6 +12,6 @@
   -->
 
 <locale name="fi_FI" full_name="Suomi">
-	<message key="plugins.generic.htmlArticleGalley.displayName">HTML-muotoinen artikkelin julkaistava tiedosto</message>
-	<message key="plugins.generic.htmlArticleGalley.description">Tämä lisäosa tukee HTML-muotoisten artikkelien julkaistavien tiedostojen hahmonnusta.</message>
+	<message key="plugins.generic.htmlArticleGalleyJNA.displayName">HTML-muotoinen artikkelin julkaistava tiedosto</message>
+	<message key="plugins.generic.htmlArticleGalleyJNA.description">Tämä lisäosa tukee HTML-muotoisten artikkelien julkaistavien tiedostojen hahmonnusta.</message>
 </locale>

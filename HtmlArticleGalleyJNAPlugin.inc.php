@@ -1,21 +1,21 @@
 <?php
 
 /**
- * @file plugins/generic/htmlArticleGalley/HtmlArticleGalleyPlugin.inc.php
+ * @file plugins/generic/htmlArticleGalleyJNA/HtmlArticleGalleyJNAPlugin.inc.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University
  * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class HtmlArticleGalleyPlugin
- * @ingroup plugins_generic_htmlArticleGalley
+ * @class HtmlArticleGalleyJNAPlugin
+ * @ingroup plugins_generic_htmlArticleGalleyJNA
  *
- * @brief Class for HtmlArticleGalley plugin
+ * @brief Class for htmlArticleGalleyJNA plugin
  */
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
-class HtmlArticleGalleyPlugin extends GenericPlugin {
+class HtmlArticleGalleyJNAPlugin extends GenericPlugin {
 	/**
 	 * @see Plugin::register()
 	 */
@@ -43,14 +43,14 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 	 * @return String
 	 */
 	function getDisplayName() {
-		return __('plugins.generic.htmlArticleGalley.displayName');
+		return __('plugins.generic.htmlArticleGalleyJNA.displayName');
 	}
 
 	/**
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return __('plugins.generic.htmlArticleGalley.description');
+		return __('plugins.generic.htmlArticleGalleyJNA.description');
 	}
 
 	/**
@@ -67,8 +67,8 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		if ($galley && $galley->getFileType() == 'text/html') {
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->addStyleSheet(
-				'htmlArticleGalleyStyles',
-				$request->getBaseUrl() . '/plugins/generic/htmlArticleGalley/display.css',
+				'htmlArticleGalleyJNAStyles',
+				$request->getBaseUrl() . '/plugins/generic/htmlArticleGalleyJNA/display.css',
 				array(
 					'priority' => STYLE_SEQUENCE_CORE,
 					'contexts' => 'frontend',
@@ -99,10 +99,10 @@ class HtmlArticleGalleyPlugin extends GenericPlugin {
 		$request = Application::getRequest();
 
 		if ($galley && $galley->getFileType() == 'text/html' && $galley->getFileId() == $fileId) {
-			if (!HookRegistry::call('HtmlArticleGalleyPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
+			if (!HookRegistry::call('HtmlArticleGalleyJNAPlugin::articleDownload', array($article,  &$galley, &$fileId))) {
 				echo $this->_getHtmlContents($request, $galley);
 				$returner = true;
-				HookRegistry::call('HtmlArticleGalleyPlugin::articleDownloadFinished', array(&$returner));
+				HookRegistry::call('HtmlArticleGalleyJNAPlugin::articleDownloadFinished', array(&$returner));
 			}
 			return true;
 		}
